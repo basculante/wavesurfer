@@ -25,8 +25,8 @@ class App extends React.Component<any, IAppState> {
       e.shiftKey ? Region.playLoop() : Region.play();
     });
 
-    wavesurfer.on("region-dblclick", function(){
-      Region.clear();
+    wavesurfer.on("region-dblclick", function(Region){
+      Region.remove();
     })
   }
 
